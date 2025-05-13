@@ -41,13 +41,21 @@ jobs:
             - name: node version
               run: node --version
             
+            - name: PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: '8.3'
+            
+            - name: php version
+              run: php --version
+              
     test-build:
         runs-on: ubuntu-latest
         
         steps:
             - name: Checkout
               uses: actions/checkout@v2     
-              
+
             - name: ls
               run: |
                 chmod +x script.sh
