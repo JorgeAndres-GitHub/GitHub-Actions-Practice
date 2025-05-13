@@ -71,3 +71,14 @@ jobs:
               uses: ./.github/actions/my-action              
               with:
                 message: "Fernando"
+    
+    say-hello:
+        runs-on: ubuntu-latest
+        
+        services:
+            mysql:
+                image: mysql:5.7
+                ports:
+                    - 3306:3306
+                env:
+                    MYSQL_ROOT_PASSWORD: example
