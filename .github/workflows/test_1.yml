@@ -88,6 +88,14 @@ jobs:
                 ports:
                     - 6379:6379
         
+        env:
+          My_Var: Mi variable de entorno
+
         steps:
             - name: Test
               run: ls
+            
+            - name: Variable de entorno
+              run: |
+                echo "Valor: $My_Var"
+
