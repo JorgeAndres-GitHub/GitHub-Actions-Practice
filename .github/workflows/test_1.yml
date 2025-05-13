@@ -28,11 +28,16 @@ jobs:
         needs: [hola]
         steps:
             - name: Checkout
-              uses: actions/checkout@v4.1.7              
+              uses: actions/checkout@v4.1.7     
+
             - name: LS
               run: ls -al
+
             - name: Setup Node.js enviroment
-              uses: actions/setup-node@v4.0.3
+              uses: actions/setup-node@v4.0.3              
+              with:
+                node-version: latest
+
             - name: node version
               run: node --version
             
@@ -42,6 +47,7 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2     
+              
             - name: ls
               run: |
                 chmod +x script.sh
