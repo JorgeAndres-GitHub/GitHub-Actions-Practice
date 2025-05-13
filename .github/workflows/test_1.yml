@@ -96,6 +96,8 @@ jobs:
               run: ls
             
             - name: Variable de entorno
+              env:
+                Step_My_Var: Nivel step
               run: |
-                echo "Valor: $My_Var"
+                echo "Valor: $Step_My_Var"
 
