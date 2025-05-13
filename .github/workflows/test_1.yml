@@ -99,5 +99,7 @@ jobs:
               env:
                 Step_My_Var: Nivel step
               run: |
+                echo "Valor: $My_Var"
                 echo "Valor: $Step_My_Var"
+                echo "Valor: ${{ vars.MY_VARIABLE_2 }}"
 
